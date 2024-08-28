@@ -1,15 +1,13 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import DashboardPage from "./pages/core/DashboardPage";
-import BookCatalogPage from "./pages/Resident/BookCatalogPage";
-import BookIssuePage from "./pages/Programs/BookIssuePage";
+import Program from "./pages/ProgramPage/Program";
 import LoginPage from "./pages/auth/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AppLayout from "./components/AppLayout";
-import MemberPage from "./pages/Reporting/MemberPage";
-import UserAccountListPage from "./pages/Assesment/UserAcounts";
-
-
+import ResidentList from "./pages/ResidentPage/ResidentList";
+import AssesmentPage from "./pages/Assesment/AssesmentPage";
+import ReportingPage from "./pages/Reporting/ReportingPage";
 function App() {
   return (
     <Routes>
@@ -18,13 +16,11 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<DashboardPage />} />
         <Route path="/user-account">
-          <Route index element={<UserAccountListPage />} />
-      
+          <Route index element={<ResidentList />} />
         </Route>
-        
-        <Route path="/book-catalog" element={<BookCatalogPage />} />
-        <Route path="/book-issue" element={<BookIssuePage />} />
-        <Route path="/member" element={<MemberPage />} />
+        <Route path="/book-catalog" element={<Program />} />
+        <Route path="/book-issue" element={<AssesmentPage />} />
+        <Route path="/member" element={<ReportingPage />} />
     
       </Route>
 

@@ -15,7 +15,7 @@ function AppLayout() {
     <PrivateRoute>
       <div className="bg-gray-100 h-auto flex">
         <div className="w-80 bg-orange-100 text-white flex-shrink-0">
-          <div className="p-5 text-center text-2xl text-green-700 font-semibold border-b border-gray-700">
+          <div className="p-5 text-center text-2xl text-green-700 font-semibold border-b border-gray-700 md-90 display-none">
             KSH
           </div>
           <nav className="mt-4">
